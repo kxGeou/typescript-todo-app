@@ -11,7 +11,7 @@ function App() {
   )
   const [todoValue, setTodoValue] = useState<string>("");
   
-  function persistData(newList) {
+  function persistData(newList: any) {
     localStorage.setItem('todos', JSON.stringify({todos: newList}))
   }
 
@@ -23,6 +23,7 @@ function App() {
   
   function handleDeleteTodo(index: number) {
     const newTodoList = todos.filter((todo, todoIndex) => {
+      console.log(todo)
       return todoIndex !== index 
     })
     setTodos(newTodoList)
