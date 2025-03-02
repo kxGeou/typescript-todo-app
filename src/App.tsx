@@ -26,6 +26,7 @@ function App() {
       console.log(todo)
       return todoIndex !== index 
     })
+    persistData(newTodoList)
     setTodos(newTodoList)
   }
 
